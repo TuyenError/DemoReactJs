@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -20,6 +20,7 @@ const ProductList = () => {
         }
     };
 
+
     return (
         <React.Fragment>
             <div>
@@ -30,8 +31,8 @@ const ProductList = () => {
                             {/* <Banner /> */}
                             <div className="btn-group mt-2 float-left a">
                                 <NavLink className="navbar-brand mb-5 ml-4" to="/add-product">
-                                    <button type="button" className="btn btn-primary">
-                                        Thêm Sản Phẩm
+                                    <button type="button" className="btn btn-warning" >
+                                        <Link to={`/Add`}>Thêm Sản Phẩm</Link>
                                     </button>
                                 </NavLink>
                             </div>
@@ -47,7 +48,7 @@ const ProductList = () => {
                                         <th className="text-center">Hình ảnh</th>
                                         <th className="text-center">Xuất xứ</th>
                                         <th className="text-center">Hành Động</th>
-                                    </tr>					
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     {products.map((product, index) => (
@@ -58,10 +59,16 @@ const ProductList = () => {
                                             <td className="text-center">
                                                 <img src={product.image} alt="Product" />
                                             </td>
-                                            <td className="text-center">{product.origin}</td> 
+                                            <td className="text-center">{product.origin}</td>
                                             <td>
-                                                <button className='btn btn-warning' > Sửa</button>
-                                                <button className='btn btn-danger' >Xóa</button>
+
+                                                <button className='btn btn-warning'>
+                                                    <Link to={`/Edit/${product.id}`}>Edit</Link>
+                                                </button>
+
+                                                <button className='btn btn-danger'>
+                                                    <Link to={`/Delete/${product.id}`}>Delete</Link>
+                                                </button>
                                             </td>
                                         </tr>
                                     ))}

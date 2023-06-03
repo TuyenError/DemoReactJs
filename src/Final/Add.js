@@ -116,7 +116,7 @@ class Add extends Component {
                     toast.success("Thêm sản phẩm thành công", {
 
                     })
-                    window.location.href = '/';
+                    window.location.href = 'http://localhost:3001/Show';
                     // history.goBack();
                 });
             }

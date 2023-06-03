@@ -8,13 +8,13 @@ const Delete = () => {
     const handleDelete = async () => {
         try {
             await axios.delete(`http://localhost:3000/products/${id}`);
-            alert('Product deleted successfully!');
+            alert('Đã xóa sản phẩm thành công!');
 
             setTimeout(() => {
-                window.location = 'http://localhost:3001/Home';
+                window.location = 'http://localhost:3001/Show';
             }, 500);
         } catch (error) {
-            console.log('Error deleting product:', error);
+            console.log('Lỗi khi xóa sản phẩm:', error);
         }
     };
 

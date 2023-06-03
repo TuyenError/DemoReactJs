@@ -42,7 +42,7 @@ const Edit = () => {
             alert('Product edited successfully!');
 
             setTimeout(() => {
-                window.location = 'http://localhost:3001/Home';
+                window.location = 'http://localhost:3001/Show';
             }, 1000);
         } catch (error) {
             console.log('Error adding product:', error);
@@ -157,4 +157,3 @@ const Edit = () => {
 };
 
 export default Edit;
-

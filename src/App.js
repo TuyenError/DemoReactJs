@@ -3,38 +3,31 @@ import './App.css';
 // import routes from './routes';
 // import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Add from './Final/Add';
+import Edit from './Final/Edit';
+
 import ProductList from './Final/ProductList';
 import { Route, Routes, Link } from "react-router-dom";
 
+import Delete from './Final/Delete';
+
 function App() {
-    // const showContentMenus = (routes) => {
-    //     var result = null;
-    //     if (routes.length > 0) {
-    //         result = routes.map((route, index) => {
-    //             return (
-    //                 <Route
-    //                     key={index}
-    //                     path={route.path}
-    //                     exact={route.exact}
-    //                     component={route.main}
-    //                 />
-    //             );
-    //         });
-    //     }
-    //     return <Switch>{result}</Switch>;
-    // };
+
+
 
     return (
+
+
         <div>
-            {/* <Router> */}
-                <Routes>
-                    {/* <React.Fragment> */}
-                        <Route exact path="/" element={<ProductList />} />
-                        <Route path="/add-product" element={< Add />} />
-                    {/* </React.Fragment> */}
-                </Routes>
-            {/* </Router> */}
-        </div>
+
+            <Routes>
+                <Route path="/Add" element={<Add></Add>} />
+
+                <Route path="/Show" element={<ProductList></ProductList>} />
+
+                <Route path="/Delete/:id" element={<Delete></Delete>} />
+                <Route path="/Edit/:id" element={<Edit></Edit>} />
+            </Routes>
+        </div >
     );
 }
 
