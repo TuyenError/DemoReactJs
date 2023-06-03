@@ -1,38 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
-// import App from './components/App/App';
-// import JustAnother from './Hooks/JustAnother';
-// import Counter from './Hooks/Counter';
-// import reportWebVitals from './reportWebVitals';
-// // import Header from './components/Header/Header';
-// import Footer from './components/Footer/Footer';
-// import Content from './components/Content/Content';
-import Menu from './Menu/Menu';
-import Lifecycle from './Lifrcycle/Lifrcycle';
-import {Route,Router, Routes,Link } from 'react-router-dom';
-import Home from './Componets/Home';
-import About from './Componets/About';
-import Contact from './Componets/Contact';
-import Tuyen from './Componets/Tuyen';
+// import routes from './routes';
+// import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import Add from './Final/Add';
+import ProductList from './Final/ProductList';
+import { Route, Routes, Link } from "react-router-dom";
+
 function App() {
+    // const showContentMenus = (routes) => {
+    //     var result = null;
+    //     if (routes.length > 0) {
+    //         result = routes.map((route, index) => {
+    //             return (
+    //                 <Route
+    //                     key={index}
+    //                     path={route.path}
+    //                     exact={route.exact}
+    //                     component={route.main}
+    //                 />
+    //             );
+    //         });
+    //     }
+    //     return <Switch>{result}</Switch>;
+    // };
+
     return (
         <div>
-            <Tuyen></Tuyen>
-        <Routes>
-               
-                <Route  path='/home' element={<Home></Home>} />
-                    <Route  path='/contact' element={<Contact></Contact>} />
-                    <Route  path='/about' element={<About></About>} />
-              
-          
-            </Routes>
+            {/* <Router> */}
+                <Routes>
+                    {/* <React.Fragment> */}
+                        <Route exact path="/" element={<ProductList />} />
+                        <Route path="/add-product" element={< Add />} />
+                    {/* </React.Fragment> */}
+                </Routes>
+            {/* </Router> */}
         </div>
-        // <body>
-        //     <div>
-        //         <Lifecycle></Lifecycle>
-        //         {/* <Menu></Menu> */}
-        //     </div>
-        // </body>
     );
 }
 
