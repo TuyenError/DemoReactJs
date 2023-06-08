@@ -69,7 +69,7 @@ class Add extends Component {
     onSave = (e) => {
         e.preventDefault();
         var { id, name, price, image, name_category, color, material
-            , expiry_date, origin, description, tinhtranghang } = this.state;
+            , expiry_date, origin, description} = this.state;
         var { history } = this.props;
         if (id) {
             axios({
@@ -85,7 +85,6 @@ class Add extends Component {
                     expiry_date: expiry_date,
                     origin: origin,
                     description: description,
-                    tinhtranghang: tinhtranghang,
                 }
             }).then(res => {
                 toast.success("Cập nhật sản phẩm thành công", {
@@ -110,7 +109,6 @@ class Add extends Component {
                         expiry_date: expiry_date,
                         origin: origin,
                         description: description,
-                        tinhtranghang: tinhtranghang,
                     }
                 }).then(res => {
                     toast.success("Thêm sản phẩm thành công", {

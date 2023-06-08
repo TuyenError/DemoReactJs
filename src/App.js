@@ -9,6 +9,7 @@ import ProductList from './Final/ProductList';
 import { Route, Routes, Link } from "react-router-dom";
 
 import Delete from './Final/Delete';
+import ShowProduct from './Laravel-API/ShowProduct';
 
 function App() {
 
@@ -18,15 +19,16 @@ function App() {
 
 
         <div>
+            <ShowProduct></ShowProduct>
 
-            <Routes>
+            {/* <Routes>
                 <Route path="/Add" element={<Add></Add>} />
 
                 <Route path="/Show" element={<ProductList></ProductList>} />
 
                 <Route path="/Delete/:id" element={<Delete></Delete>} />
                 <Route path="/Edit/:id" element={<Edit></Edit>} />
-            </Routes>
+            </Routes> */}
         </div >
     );
 }

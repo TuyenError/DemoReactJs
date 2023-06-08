@@ -77,6 +77,18 @@
       "description": "áhdad",
       "tinhtranghang": true,
       "id": "gg"
+    },
+    {
+      "name": "Banh Mochi",
+      "price": "3000",
+      "image": "/images/152550675_1112469582552799_3046846256814491119_n.jpg",
+      "color": "Đỏ",
+      "name_category": "sản phẩm hot",
+      "material": "bo mki",
+      "expiry_date": "2024-02-14",
+      "origin": "Việt Nam",
+      "description": "Đầu tháng ăn gì và cuối tháng ăn gì ",
+      "id": "bZ6myvs"
     }
   ],
   "categories": [
